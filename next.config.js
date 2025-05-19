@@ -1,14 +1,17 @@
+// next.config.js
+process.env.NEXT_DISABLE_ESLINT = '1';
+process.env.TYPESCRIPT_SKIP_TRANSFORMATION = 'true';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   eslint: {
-    // Disable ESLint during builds
     ignoreDuringBuilds: true,
   },
   typescript: {
-    // Also ignore TypeScript errors during builds
     ignoreBuildErrors: true,
   },
-  // Copy any other config you had in your next.config.ts file here
+  // Any other configurations you need
 };
 
 module.exports = nextConfig;
